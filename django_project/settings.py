@@ -28,6 +28,8 @@ DEBUG = True
 
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
+
+
 def ip_addresses():
     ip_list = []
     for interface in netifaces.interfaces():
@@ -37,12 +39,14 @@ def ip_addresses():
                 ip_list.append(addrs[x][0]['addr'])
     return ip_list
 
+
 ALLOWED_HOSTS = ip_addresses()
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
