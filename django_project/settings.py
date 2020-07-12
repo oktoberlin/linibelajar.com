@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0c1dab7d7d7d319e83406b8b3065ec8f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
@@ -40,7 +40,7 @@ def ip_addresses():
     return ip_list
 
 
-ALLOWED_HOSTS = ip_addresses()
+ALLOWED_HOSTS = ['104.248.146.95', 'www.linibelajar.com', 'linibelajar.com']
 
 
 # Application definition
