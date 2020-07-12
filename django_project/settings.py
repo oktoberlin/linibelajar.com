@@ -40,7 +40,7 @@ def ip_addresses():
     return ip_list
 
 
-ALLOWED_HOSTS = ip_addresses()
+ALLOWED_HOSTS = ['104.248.146.95']
 
 
 # Application definition
