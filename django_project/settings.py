@@ -146,6 +146,6 @@ if DEBUG:
     MEDIA_URL = '/image/'
     STATIC_ROOT = '/home/django/django_project/static/'
     MEDIA_ROOT = '/home/django/django_project/static/image/'
-    STATICFILES_DIRS = (
+    STATICFILES_DIRS = [
         '/home/django/django_project/static/css'
-    )
+    ]
