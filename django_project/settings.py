@@ -40,7 +40,7 @@ DEBUG = False
 #   return ip_list
 
 
-ALLOWED_HOSTS = ['linibelajar.com', '.linibelajar.com',
+ALLOWED_HOSTS = ['linibelajar.com', 'www.linibelajar.com',
                  'localhost', '104.248.146.95', ]
 
 
