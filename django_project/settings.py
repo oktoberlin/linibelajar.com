@@ -73,7 +73,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'image'),
+            os.path.join(BASE_DIR, 'static'),
+            os.path.join(BASE_DIR, 'staticfiles'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -148,5 +149,5 @@ if DEBUG:
     STATIC_ROOT = '/home/django/django_project/static/'
     MEDIA_ROOT = '/home/django/django_project/static/image/'
     STATICFILES_DIRS = [
-        '/home/django/django_project/static/'
+        '/home/django/django_project/staticfiles/'
     ]
