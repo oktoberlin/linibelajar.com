@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0c1dab7d7d7d319e83406b8b3065ec8f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Find out what the IP addresses are at run time
 # This is necessary because otherwise Gunicorn will reject the connections
@@ -40,8 +40,8 @@ DEBUG = True
 #   return ip_list
 
 
-ALLOWED_HOSTS = ['localhost', '104.248.146.95',
-                 'www.linibelajar.com', 'linibelajar.com']
+ALLOWED_HOSTS = ['linibelajar.com', '.linibelajar.com',
+                 'localhost', '104.248.146.95', ]
 
 
 # Application definition
@@ -143,11 +143,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-if DEBUG:
-    MEDIA_URL = '/image/'
-    STATIC_ROOT = '/home/django/django_project/static/'
-    MEDIA_ROOT = '/home/django/django_project/static/image/'
-    STATICFILES_DIRS = [
-        '/home/django/django_project/static/'
-    ]
+# if DEBUG:
+#    MEDIA_URL = '/image/'
+#   STATIC_ROOT = '/home/django/django_project/static/'
+#  MEDIA_ROOT = '/home/django/django_project/static/image/'
+#  STATICFILES_DIRS = [
+#      '/home/django/django_project/static/'
+#  ]
