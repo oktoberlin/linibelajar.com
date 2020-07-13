@@ -30,18 +30,17 @@ DEBUG = False
 # This is necessary because otherwise Gunicorn will reject the connections
 
 
-# def ip_addresses():
-#   ip_list = []
-#   for interface in netifaces.interfaces():
-#       addrs = netifaces.ifaddresses(interface)
-#       for x in (netifaces.AF_INET, netifaces.AF_INET6):
-#           if x in addrs:
-#               ip_list.append(addrs[x][0]['addr'])
-#   return ip_list
+def ip_addresses():
+    ip_list = ['linibelajar.com', 'www.linibelajar.com']
+    for interface in netifaces.interfaces():
+        addrs = netifaces.ifaddresses(interface)
+        for x in (netifaces.AF_INET, netifaces.AF_INET6):
+            if x in addrs:
+                ip_list.append(addrs[x][0]['addr'])
+    return ip_list
 
 
-ALLOWED_HOSTS = ['linibelajar.com', 'www.linibelajar.com',
-                 'localhost', '104.248.146.95', ]
+ALLOWED_HOSTS = ip_addresses()
 
 
 # Application definition
