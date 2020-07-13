@@ -149,5 +149,5 @@ if DEBUG:
     STATIC_ROOT = '/home/django/django_project/static/'
     MEDIA_ROOT = '/home/django/django_project/static/image/'
     STATICFILES_DIRS = [
-        '/home/django/django_project/staticfiles/'
+        '/home/django/django_project/static/'
     ]
